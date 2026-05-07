@@ -1,0 +1,9 @@
+priority_rank,segment_name,industry_group,attractiveness_score,priority_tier,opportunity_count,total_pipeline_value_eur,expected_pipeline_value_eur,market_size_score,growth_score,margin_score,strategic_fit_score,customer_pain_score,sales_accessibility_score,case_evidence_score,implementation_feasibility_score,competitive_intensity_score,regulatory_barrier_score
+1,Aerospace MRO,Aerospace,7.35,Medium-high priority,2,430000,156000.0,8,7,8,9,8,6,8,6,5,8
+2,Mining Equipment,Mining,7.18,Medium-high priority,2,250000,110500.0,6,7,7,8,8,7,7,8,6,4
+3,Defence Sustainment,Defence,7.13,Medium-high priority,2,520000,175000.0,7,6,9,9,9,5,7,5,4,9
+4,Industrial Machinery,Industrial,7.04,Medium-high priority,1,110000,66000.0,7,6,7,8,7,7,7,8,6,4
+5,Oil and Gas Maintenance,Energy,6.34,Medium priority,1,200000,70000.0,7,5,8,7,7,6,6,6,7,7
+6,Maritime Repair,Maritime,6.27,Medium priority,1,140000,56000.0,6,5,7,7,7,6,6,6,5,6
+7,Automotive Remanufacturing,Automotive,6.19,Medium priority,1,120000,36000.0,8,6,6,6,6,7,5,7,8,5
+8,Power Generation,Energy,5.98,Low priority,1,170000,42500.0,6,5,8,7,6,5,6,5,5,7

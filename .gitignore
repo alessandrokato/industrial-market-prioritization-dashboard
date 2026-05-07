@@ -1,0 +1,6 @@
+*.sqlite
+*.sqlite3
+*.db
+*.sqlite-journal
+.DS_Store
+Thumbs.db
