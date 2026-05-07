@@ -1,0 +1,12 @@
+opportunity_id,segment_id,company_type,region,estimated_deal_value_eur,sales_stage,probability_percent
+1,1,Aircraft maintenance provider,Europe,180000,Qualified,45
+2,1,Aerospace parts supplier,North America,250000,Discovery,30
+3,2,Defence contractor,Europe,300000,Qualified,40
+4,2,Naval maintenance organization,Europe,220000,Discovery,25
+5,3,Mining operator,Australia,160000,Proposal,55
+6,3,Heavy equipment distributor,South America,90000,Discovery,25
+7,4,Oilfield services provider,Middle East,200000,Qualified,35
+8,5,Automotive remanufacturer,Europe,120000,Discovery,30
+9,6,Ship repair yard,Europe,140000,Qualified,40
+10,7,Industrial maintenance provider,Europe,110000,Proposal,60
+11,8,Power plant operator,Europe,170000,Discovery,25

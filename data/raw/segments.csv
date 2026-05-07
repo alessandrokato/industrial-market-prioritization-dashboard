@@ -1,0 +1,9 @@
+segment_id,segment_name,industry_group,description
+1,Aerospace MRO,Aerospace,Repair and restoration of aircraft components
+2,Defence Sustainment,Defence,Repair and life extension of military equipment
+3,Mining Equipment,Mining,Repair of high-wear industrial components
+4,Oil and Gas Maintenance,Energy,Corrosion and wear repair for critical assets
+5,Automotive Remanufacturing,Automotive,Restoration of used components for reuse
+6,Maritime Repair,Maritime,Corrosion repair and coating for ship components
+7,Industrial Machinery,Industrial,Repair of high-value machine components
+8,Power Generation,Energy,Repair and maintenance of turbine and plant components
