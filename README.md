@@ -87,6 +87,7 @@ industrial-market-prioritization-dashboard/
 ├── sql/
 ├── .gitignore
 └── README.md
+```
 
 ## Files
 
