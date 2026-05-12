@@ -26,6 +26,14 @@ This project answers:
 - CSV-based dummy data
 - Weighted scoring model
 
+## What this project demonstrates
+
+- Built a weighted market prioritization model using SQL.
+- Joined multiple dummy datasets into a structured scoring output.
+- Translated commercial criteria into a decision-support dashboard.
+- Used Power BI to visualize market attractiveness, pipeline value, and segment-level priorities.
+- Documented the workflow in a reproducible GitHub repository.
+
 ## Data structure
 
 The project uses four dummy input datasets:
