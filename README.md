@@ -87,6 +87,7 @@ industrial-market-prioritization-dashboard/
 ├── sql/
 ├── .gitignore
 └── README.md
+
 ## Files
 
 | Path | Description |
@@ -96,6 +97,7 @@ industrial-market-prioritization-dashboard/
 | `data/processed/market_prioritization_scores.csv` | Final processed output used in Power BI |
 | `powerbi/market_prioritization_dashboard.pbix` | Power BI dashboard file |
 | `screenshots/dashboard_overview.png` | Dashboard screenshot |
+
 ## Limitations
 
 This is a non-confidential portfolio project using dummy data. It is inspired by market prioritization and commercial analysis workflows, but it does not use proprietary company data.
