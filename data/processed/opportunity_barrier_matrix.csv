@@ -1,0 +1,9 @@
+priority_rank,segment_name,industry_group,attractiveness_score,adoption_barrier_score,expected_pipeline_value_eur,opportunity_count,opportunity_barrier_quadrant
+1,Aerospace MRO,Aerospace,7.35,6.2,156000.0,2,Quick win
+2,Mining Equipment,Mining,7.18,4.3,110500.0,2,Quick win
+3,Defence Sustainment,Defence,7.13,6.6,175000.0,2,Strategic bet
+4,Industrial Machinery,Industrial,7.04,4.3,66000.0,1,Quick win
+5,Oil and Gas Maintenance,Energy,6.34,6.4,70000.0,1,Selective opportunity
+6,Maritime Repair,Maritime,6.27,5.4,56000.0,1,Selective opportunity
+7,Automotive Remanufacturing,Automotive,6.19,5.6,36000.0,1,Selective opportunity
+8,Power Generation,Energy,5.98,6.1,42500.0,1,Selective opportunity

@@ -4,3 +4,4 @@
 *.sqlite-journal
 .DS_Store
 Thumbs.db
+*.sqpro
