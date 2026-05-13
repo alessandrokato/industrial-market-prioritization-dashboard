@@ -1,10 +1,7 @@
--- 02_business_analysis_queries.sql
--- Purpose: additional SQL analysis questions for the industrial market prioritization project.
--- These queries extend the scoring model by turning the ranked output into business insights.
+-- Business analysis queries based on the scored output.
+-- Run after 01_market_scoring_model.sql has created market_prioritization_scores.
 
-------------------------------------------------------------
--- 1. Which industry groups have the highest expected pipeline value?
-------------------------------------------------------------
+-- 1. Industry groups ranked by expected pipeline value
 
 SELECT
     industry_group,
@@ -17,10 +14,7 @@ GROUP BY industry_group
 ORDER BY total_expected_pipeline_value_eur DESC;
 
 
-------------------------------------------------------------
--- 2. Which segments have high attractiveness but low opportunity coverage?
--- Interpretation: attractive markets where commercial pipeline is still thin.
-------------------------------------------------------------
+-- 2. Attractive segments with limited current pipeline coverage
 
 SELECT
     priority_rank,
@@ -36,11 +30,7 @@ WHERE attractiveness_score >= 7.00
 ORDER BY attractiveness_score DESC;
 
 
-------------------------------------------------------------
--- 3. Which segments face the highest adoption barriers?
--- Higher barrier score combines regulation, implementation difficulty,
--- and competitive intensity.
-------------------------------------------------------------
+-- 3. Segments with the highest adoption barriers
 
 SELECT
     s.segment_name,
@@ -61,9 +51,7 @@ LEFT JOIN scoring_inputs si
 ORDER BY adoption_barrier_score DESC;
 
 
-------------------------------------------------------------
--- 4. Which individual opportunities contribute most to expected value?
-------------------------------------------------------------
+-- 4. Opportunities ranked by expected value
 
 SELECT
     o.opportunity_id,
