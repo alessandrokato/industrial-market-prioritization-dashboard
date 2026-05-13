@@ -84,8 +84,8 @@ The model should not be read as a final answer. It is a structured way to compar
 ```text
 industrial-market-prioritization-dashboard/
 +-- data/
-¦   +-- raw/
-¦   +-- processed/
+ï¿½   +-- raw/
+ï¿½   +-- processed/
 +-- powerbi/
 +-- screenshots/
 +-- sql/
@@ -100,6 +100,8 @@ industrial-market-prioritization-dashboard/
 | `sql/01_market_scoring_model.sql` | SQL model used to calculate the segment attractiveness ranking |
 | `sql/02_business_analysis_queries.sql` | Additional SQL queries answering business questions from the scored output |
 | `sql/03_data_quality_checks.sql` | SQL checks for duplicates, missing values, invalid scores, orphan records, and output completeness |
+| `sql/04_opportunity_barrier_matrix.sql` | SQL query used to classify segments by attractiveness, adoption barriers, and expected pipeline value |
+| `data/processed/opportunity_barrier_matrix.csv` | Processed output for the opportunity vs barrier matrix |
 | `data/processed/market_prioritization_scores.csv` | Final processed output used in Power BI |
 | `powerbi/market_prioritization_dashboard.pbix` | Power BI dashboard file |
 | `screenshots/dashboard_overview.png` | Dashboard screenshot |
