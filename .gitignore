@@ -2,6 +2,9 @@
 *.sqlite3
 *.db
 *.sqlite-journal
+*.sqpro
+*.sqbpro
+data/processed/*.sqpro
+data/processed/*.sqbpro
 .DS_Store
 Thumbs.db
-*.sqpro
