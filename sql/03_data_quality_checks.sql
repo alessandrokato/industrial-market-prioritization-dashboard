@@ -1,13 +1,7 @@
--- 03_data_quality_checks.sql
--- Purpose: validate the dummy input data and processed scoring output
--- before using them in the Power BI dashboard.
---
--- These checks help confirm that the market prioritization model is based on
--- complete, consistent, and logically valid data.
+-- Data quality checks for the source tables and final scored output.
+-- Most checks should return no rows. The two summary checks should return PASS.
 
-------------------------------------------------------------
--- 1. Check for duplicate segment IDs in the segment master table
-------------------------------------------------------------
+-- 1. Duplicate segment IDs
 
 SELECT
     segment_id,
@@ -17,9 +11,7 @@ GROUP BY segment_id
 HAVING COUNT(*) > 1;
 
 
-------------------------------------------------------------
--- 2. Check whether all segments have market indicator records
-------------------------------------------------------------
+-- 2. Segments missing market indicator records
 
 SELECT
     s.segment_id,
@@ -30,9 +22,7 @@ LEFT JOIN market_indicators mi
 WHERE mi.segment_id IS NULL;
 
 
-------------------------------------------------------------
--- 3. Check whether all segments have scoring input records
-------------------------------------------------------------
+-- 3. Segments missing scoring input records
 
 SELECT
     s.segment_id,
@@ -43,9 +33,7 @@ LEFT JOIN scoring_inputs si
 WHERE si.segment_id IS NULL;
 
 
-------------------------------------------------------------
--- 4. Check for opportunities linked to unknown segment IDs
-------------------------------------------------------------
+-- 4. Opportunities linked to unknown segments
 
 SELECT
     o.opportunity_id,
@@ -58,9 +46,7 @@ LEFT JOIN segments s
 WHERE s.segment_id IS NULL;
 
 
-------------------------------------------------------------
--- 5. Check for missing values in scoring fields
-------------------------------------------------------------
+-- 5. Missing scoring values
 
 SELECT
     s.segment_id,
@@ -93,9 +79,7 @@ WHERE
     si.implementation_feasibility_score IS NULL;
 
 
-------------------------------------------------------------
--- 6. Check for scores outside the expected 1 to 10 range
-------------------------------------------------------------
+-- 6. Scores outside the expected 1 to 10 range
 
 SELECT
     s.segment_id,
@@ -216,9 +200,7 @@ JOIN scoring_inputs si
 WHERE si.implementation_feasibility_score NOT BETWEEN 1 AND 10;
 
 
-------------------------------------------------------------
--- 7. Check for invalid opportunity values
-------------------------------------------------------------
+-- 7. Invalid opportunity values
 
 SELECT
     opportunity_id,
@@ -235,9 +217,7 @@ WHERE
     probability_percent > 100;
 
 
-------------------------------------------------------------
--- 8. Check whether all segments appear in the processed scoring output
-------------------------------------------------------------
+-- 8. Source segments missing from final scoring output
 
 SELECT
     s.segment_id,
@@ -248,9 +228,7 @@ LEFT JOIN market_prioritization_scores mps
 WHERE mps.segment_name IS NULL;
 
 
-------------------------------------------------------------
--- 9. Summary check: compare source segment count with scored output count
-------------------------------------------------------------
+-- 9. Source count versus scored output count
 
 SELECT
     (SELECT COUNT(*) FROM segments) AS source_segment_count,
@@ -263,9 +241,7 @@ SELECT
     END AS segment_count_check;
 
 
-------------------------------------------------------------
--- 10. Summary check: confirm score range in final output
-------------------------------------------------------------
+-- 10. Final attractiveness score range
 
 SELECT
     MIN(attractiveness_score) AS min_attractiveness_score,
